@@ -1,3 +1,11 @@
+**Builder Pattern (Parameter)** - Uses functional parameters to configure the object being built.
+
+In this code:
+- `EmailBuilder` builds email objects step by step
+- `SendEmail()` takes a function that configures the builder
+- Client uses closure: `SendEmail(func(b *EmailBuilder) { b.From("...").To("...") })`
+- The builder validates input (e.g., checks for @ in email)
+
 ```go
 package main
 

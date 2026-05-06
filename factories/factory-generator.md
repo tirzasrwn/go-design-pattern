@@ -1,3 +1,12 @@
+**Factory Generator** - Factories that create specialized factory functions or structs.
+
+In this code:
+- `NewEmployeeFactory()` returns a function that creates employees with preset role/income
+- `NewEmployeeFactory2()` returns an `EmployeeFactory` struct with `Create()` method
+- Generates role-specific factories: `developerFactory`, `managerFactory`
+- Functional approach: `developer := developerFactory("Adam")`
+- Structural approach allows post-hoc modification: `bossFactory.AnnualIncome = 110000`
+
 ```go
 package main
 

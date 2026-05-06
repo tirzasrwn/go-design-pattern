@@ -1,3 +1,12 @@
+**Builder Pattern (Facets)** - Builder with specialized sub-builders for different concerns.
+
+In this code:
+- `Person` has multiple concerns: address and job
+- `PersonBuilder` is the base builder
+- `PersonAddressBuilder` handles address (Lives() facet)
+- `PersonJobBuilder` handles job (Works() facet)
+- Client uses fluent API across facets: `pb.Lives().At("...").Works().At("...")`
+
 ```go
 package main
 

@@ -1,3 +1,12 @@
+**Bridge Pattern** - Separates abstraction from implementation so both can vary independently.
+
+In this code:
+- `Circle` is the abstraction
+- `Renderer` is the implementation interface
+- `VectorRenderer` and `RasterRenderer` are concrete implementations
+- `Circle` delegates rendering to the `Renderer` interface via composition
+- You can change the renderer without changing `Circle`
+
 ```go
 package structural_bridge
 

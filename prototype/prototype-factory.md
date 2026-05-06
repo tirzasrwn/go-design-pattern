@@ -1,3 +1,12 @@
+**Prototype Factory** - Uses prototype instances to create new objects.
+
+In this code:
+- `mainOffice` and `auxOffice` are prototype employees with preset addresses
+- `newEmployee()` clones the prototype using `DeepCopy()`
+- `NewMainOfficeEmployee()` and `NewAuxOfficeEmployee()` are factory functions
+- Each new employee starts from a prototype and gets customized (name, suite)
+- Efficient: avoids repeating office address configuration
+
 ```go
 package main
 

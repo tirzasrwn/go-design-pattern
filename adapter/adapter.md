@@ -1,3 +1,11 @@
+**Adapter Pattern** - Converts one interface into another that the client expects.
+
+In this code:
+- `VectorImage` is the interface you have (with lines)
+- `RasterImage` is the interface you need (with points)
+- `vectorToRasterAdapter` adapts `VectorImage` to work as `RasterImage`
+- The adapter converts lines into points so `DrawPoints()` can work with `VectorImage`
+
 ```go
 package main // structural.adapter.adapter
 import (

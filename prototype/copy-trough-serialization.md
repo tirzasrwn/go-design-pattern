@@ -1,3 +1,12 @@
+**Prototype Pattern (Serialization)** - Deep copies objects by serializing and deserializing.
+
+In this code:
+- `DeepCopy()` uses Go's `encoding/gob` to serialize the object
+- Serializes `Person` to bytes, then deserializes to create a clone
+- Handles nested structs and slices automatically
+- No need to manually copy each field
+- Trade-off: slower than manual copy but works generically
+
 ```go
 package prototype
 

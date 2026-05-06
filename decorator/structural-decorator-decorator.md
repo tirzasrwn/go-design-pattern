@@ -1,3 +1,12 @@
+**Decorator Pattern** - Adds responsibilities to objects dynamically without affecting other objects.
+
+In this code:
+- `Shape` is the base interface with `Render()`
+- `Circle` and `Square` are concrete shapes
+- `ColoredShape` decorates a `Shape` by adding color
+- `TransparentShape` decorates a `Shape` by adding transparency
+- Decorators can be stacked: `TransparentShape{&ColoredShape{&circle, "Red"}, 0.5}`
+
 ```go
 package decorator
 

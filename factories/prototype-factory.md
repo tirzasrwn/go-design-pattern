@@ -1,3 +1,12 @@
+**Prototype Factory** - Creates objects based on a prototype/role pattern.
+
+In this code:
+- `NewEmployee()` is a factory that creates employees based on role constants
+- Uses `iota` for `Developer` and `Manager` roles
+- Returns pre-configured prototypes with default position and income
+- Client sets only the name: `m := NewEmployee(Manager); m.Name = "Sam"`
+- Simple switch-based factory for different employee types
+
 ```go
 package factories
 

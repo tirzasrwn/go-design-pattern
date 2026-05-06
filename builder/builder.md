@@ -1,3 +1,11 @@
+**Builder Pattern** - Constructs complex objects step by step with a fluent interface.
+
+In this code:
+- `HtmlElement` is the complex object being built
+- `HtmlBuilder` constructs HTML elements incrementally
+- `AddChildFluent()` returns the builder for method chaining
+- Client builds HTML: `b.AddChildFluent("li", "hello").AddChildFluent("li", "world")`
+
 ```go
 package main
 

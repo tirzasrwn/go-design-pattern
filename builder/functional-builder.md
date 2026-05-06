@@ -1,3 +1,12 @@
+**Builder Pattern (Functional)** - Uses functions as building blocks stored in a slice.
+
+In this code:
+- `Person` is the object being built
+- `personMod` is a function type that modifies a Person
+- `PersonBuilder` stores a slice of `personMod` functions
+- `Build()` applies all stored modifications to create the final object
+- Easy to extend: just add more modifier functions
+
 ```go
 package main
 

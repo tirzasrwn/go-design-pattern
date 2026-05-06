@@ -1,3 +1,13 @@
+**Singleton Pattern** - Ensures a class has only one instance and provides global access.
+
+In this code:
+
+- `singletonDatabase` is the single instance (wrapped in `Database` interface)
+- `sync.Once` ensures thread-safe lazy initialization
+- `GetSingletonDatabase()` returns the single instance (created only once)
+- `GetTotalPopulation()` uses the singleton directly
+- `GetTotalPopulationEx()` accepts any `Database` (better for testing with `DummyDatabase`)
+
 ```go
 package main
 

@@ -1,3 +1,12 @@
+**Interface Factory** - Factory that returns different implementations based on input.
+
+In this code:
+- `Person` is an interface with `SayHello()` method
+- `NewPerson()` factory returns different implementations based on age
+- If age > 100, returns `tiredPerson` (too tired to talk)
+- Otherwise returns regular `person`
+- Client works with `Person` interface without knowing the concrete type
+
 ```go
 package main
 

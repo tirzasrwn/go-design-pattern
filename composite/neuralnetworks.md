@@ -1,3 +1,12 @@
+**Composite Pattern** - Treats individual objects and compositions uniformly.
+
+In this code:
+- `NeuronInterface` defines `Iter()` for both single neurons and layers
+- `Neuron` is a leaf node (returns itself in `Iter()`)
+- `NeuronLayer` is a composite (returns all neurons in `Iter()`)
+- `Connect()` works with any `NeuronInterface` - single neuron or layer
+- Client can connect: neuron-to-neuron, neuron-to-layer, layer-to-layer
+
 ```go
 package composite
 

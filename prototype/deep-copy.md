@@ -1,3 +1,11 @@
+**Prototype Pattern (Manual Deep Copy)** - Demonstrates the need for deep copying.
+
+In this code:
+- Shows the problem with shallow copy: `jane := john` shares the same `Address` pointer
+- Changing `jane.Address.StreetAddress` also changes `john.Address` (bug!)
+- Solution: manually create new `Address` with copied values
+- `jane.Address = &Address{john.Address.StreetAddress, ...}` creates independent copy
+
 ```go
 package prototype
 

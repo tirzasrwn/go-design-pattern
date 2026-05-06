@@ -1,3 +1,12 @@
+**Composite Pattern** - Composes objects into tree structures to represent part-whole hierarchies.
+
+In this code:
+- `GraphicObject` can be a single object or a group containing children
+- `Children` field allows nesting (composite structure)
+- Both circles and squares are `GraphicObject` instances
+- `drawing` contains squares, circles, and a `group` with more objects
+- Same `String()` method works on both leaf and composite objects
+
 ```go
 package composite
 

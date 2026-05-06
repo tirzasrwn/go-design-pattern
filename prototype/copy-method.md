@@ -1,3 +1,12 @@
+**Prototype Pattern (Copy Method)** - Creates new objects by cloning existing ones via a copy method.
+
+In this code:
+- `Address` and `Person` have `DeepCopy()` methods
+- `DeepCopy()` creates a completely independent copy (not shallow)
+- Copies nested structs (`Address`) and slices (`Friends`) properly
+- `jane := john.DeepCopy()` creates clone without affecting `john`
+- Changes to `jane` don't affect `john`
+
 ```go
 package prototype
 

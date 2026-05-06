@@ -1,3 +1,12 @@
+**Decorator Pattern (Multiple Inheritance Alternative)** - Combines behaviors from multiple sources without true multiple inheritance.
+
+In this code:
+- `Bird` and `Lizard` are separate classes with their own behaviors
+- Go doesn't have multiple inheritance, so `Dragon` uses composition
+- `Dragon` contains both `Bird` and `Lizard` as fields
+- `Dragon` delegates `Fly()` to `Bird` and `Crawl()` to `Lizard`
+- `SetAge()` syncs age across both components
+
 ```go
 package decorator
 

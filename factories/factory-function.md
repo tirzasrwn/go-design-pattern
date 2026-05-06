@@ -1,3 +1,11 @@
+**Factory Function** - A simple function that creates and returns objects.
+
+In this code:
+- `NewPerson()` is a factory function that creates `Person` objects
+- Encapsulates object creation logic
+- Can return pointer or value (here returns `*Person`)
+- Provides a named constructor alternative to direct struct initialization
+
 ```go
 package factories
 
