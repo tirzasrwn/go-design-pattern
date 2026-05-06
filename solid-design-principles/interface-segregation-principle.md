@@ -1,3 +1,12 @@
+**Interface Segregation Principle (ISP)** - Clients shouldn't depend on interfaces they don't use.
+
+In this code:
+- `Machine` interface forces `OldFashionedPrinter` to implement `Fax()` and `Scan()` (panics!)
+- Violates ISP: printer doesn't need fax/scan, but must implement them
+- Solution: Split into `Printer` and `Scanner` interfaces
+- `MyPrinter` implements only `Printer` (no fake methods needed)
+- `MultiFunctionMachine` combines interfaces via composition (decorator pattern)
+
 ```go
 package main
 

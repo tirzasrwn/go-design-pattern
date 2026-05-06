@@ -1,3 +1,13 @@
+**Dependency Inversion Principle (DIP)** - High-level modules shouldn't depend on low-level modules; both should depend on abstractions.
+
+In this code:
+- `Research` is high-level, `Relationships` is low-level
+- Initially `Research` depends directly on `Relationships` structure (bad)
+- Solution: `RelationshipBrowser` interface abstracts the dependency
+- `Research` depends on `RelationshipBrowser` interface, not `Relationships`
+- `Relationships` implements `RelationshipBrowser` - both depend on the abstraction
+- Easy to swap `Relationships` with a different implementation
+
 ```go
 package main
 

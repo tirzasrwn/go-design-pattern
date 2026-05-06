@@ -1,3 +1,12 @@
+**Open-Closed Principle (OCP)** - Open for extension, closed for modification.
+
+In this code:
+- `Filter` struct requires modifying code to add new filter criteria (breaks OCP)
+- Solution: `Specification` interface with `IsSatisfied()` method
+- `ColorSpecification`, `SizeSpecification` extend filtering without modifying `BetterFilter`
+- `AndSpecification` combines specifications for complex criteria
+- Add new filters by creating new `Specification` implementations, not changing existing code
+
 ```go
 package main
 

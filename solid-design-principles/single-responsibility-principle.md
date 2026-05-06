@@ -1,3 +1,11 @@
+**Single Responsibility Principle (SRP)** - A class should have only one reason to change.
+
+In this code:
+- `Journal` manages journal entries (its single responsibility)
+- Adding `Save()`, `Load()` methods breaks SRP - persistence is a different responsibility
+- Solution: Move persistence to separate `Persistence` struct or functions
+- `SaveToFile()` function and `Persistence.saveToFile()` show proper separation
+
 ```go
 package main
 

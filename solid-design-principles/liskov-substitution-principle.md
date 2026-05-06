@@ -1,3 +1,12 @@
+**Liskov Substitution Principle (LSP)** - Subtypes must be substitutable for their base types.
+
+In this code:
+- `Square` embeds `Rectangle` but violates LSP when `SetWidth()` is called
+- `UseIt()` expects area = width × height, but Square changes both dimensions
+- With `Square{5}`, `UseIt()` gets area 100 instead of expected 50 (5×10)
+- Solution: `Square2` doesn't inherit from `Rectangle`, uses conversion method instead
+- Subclasses should not break behavior expected by the base class interface
+
 ```go
 package main
 
