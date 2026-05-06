@@ -1,6 +1,7 @@
 **Decorator Pattern** - Adds responsibilities to objects dynamically without affecting other objects.
 
 In this code:
+
 - `Shape` is the base interface with `Render()`
 - `Circle` and `Square` are concrete shapes
 - `ColoredShape` decorates a `Shape` by adding color
